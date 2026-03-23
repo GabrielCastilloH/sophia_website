@@ -22,6 +22,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overscroll-behavior: none;
 }
 
 body {
@@ -62,6 +63,7 @@ body {
   letter-spacing: 0.06em;
   padding: 0.4rem 0.9rem !important;
   transition: color 0.2s;
+  cursor: pointer;
 }
 
 .custom-navbar .nav-link:hover {
@@ -422,24 +424,37 @@ body {
   padding: 6rem 0;
 }
 
+#experience .section-heading {
+  color: #1E1A50;
+}
+
 #experience .container {
   max-width: 860px;
 }
 
+/*
+  Timeline layout
+  ─────────────────────────────────────────
+  .exp-timeline has padding-left: 2.5rem (40px).
+  The line sits at left: 5px (center = 6px from border).
+  Each .exp-marker is left: -2.5rem, so its left edge
+  lands at 0px from the timeline border and its center
+  at 6px — perfectly on the line, regardless of padding.
+*/
 .exp-timeline {
   position: relative;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 }
 
 /* Vertical line */
 .exp-timeline::before {
   content: "";
   position: absolute;
-  left: 0.55rem;
-  top: 0.5rem;
-  bottom: 0.5rem;
+  left: 5px;
+  top: 0;
+  bottom: 0;
   width: 2px;
-  background-color: rgba(43, 43, 43, 0.22);
+  background-color: rgba(45, 40, 96, 0.4);
   border-radius: 2px;
 }
 
@@ -452,13 +467,13 @@ body {
   margin-bottom: 0;
 }
 
-/* Circle marker */
+/* Circle marker — center aligns with line at left: 5px */
 .exp-marker {
   position: absolute;
-  left: -2.48rem;
-  top: 1.9rem;
-  width: 13px;
-  height: 13px;
+  left: -2.5rem;           /* left edge at 0px → center at 6px = line center */
+  top: 1.85rem;
+  width: 12px;
+  height: 12px;
   background-color: var(--text-dark);
   border: 2.5px solid var(--lavender);
   border-radius: 50%;
@@ -878,7 +893,11 @@ footer p {
   }
 
   .exp-timeline {
-    padding-left: 2.5rem;
+    padding-left: 2.25rem;
+  }
+
+  .exp-marker {
+    left: -2.25rem;
   }
 
   .exp-header {
@@ -993,6 +1012,6 @@ footer p {
   }
 
   .exp-marker {
-    left: -2rem;
+    left: -2rem; /* left edge at 0px → center at 6px = line center */
   }
 }
