@@ -616,6 +616,86 @@ body {
   margin: 0;
 }
 
+/* ---- LANGUAGES ---- */
+#languages {
+  background-color: var(--off-white);
+  padding: 6rem 0;
+}
+
+#languages .container {
+  max-width: 1080px;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.language-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 4px 16px rgba(43, 43, 43, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(43, 43, 43, 0.15);
+}
+
+.lang-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.lang-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.lang-level {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.55rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.lang-level-c2 {
+  background-color: var(--purple);
+  color: #fff;
+}
+
+.lang-level-b {
+  background-color: var(--lavender);
+  color: var(--text-dark);
+}
+
+.lang-level-a {
+  background-color: var(--peach);
+  color: var(--text-dark);
+}
+
+.lang-description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #3A3470;
+  margin: 0;
+}
+
 /* ---- FOOTER ---- */
 footer {
   background-color: var(--off-white);
@@ -908,7 +988,8 @@ footer p {
     align-items: flex-start;
   }
 
-  .awards-grid {
+  .awards-grid,
+  .languages-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -955,7 +1036,8 @@ footer p {
 
   #projects,
   #experience,
-  #awards {
+  #awards,
+  #languages {
     padding: 4rem 0;
   }
 
@@ -971,7 +1053,8 @@ footer p {
     font-size: 2.8rem;
   }
 
-  .awards-grid {
+  .awards-grid,
+  .languages-grid {
     grid-template-columns: 1fr;
   }
 
