@@ -755,6 +755,11 @@ footer p {
 
 .project-hero-cream { background-color: var(--off-white); }
 .project-hero-blue  { background-color: var(--peach); }
+.project-hero-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .project-hero-badge {
   display: inline-block;
@@ -775,6 +780,12 @@ footer p {
   color: #5850C0;
   background-color: rgba(255, 255, 255, 0.5);
   border-color: rgba(88, 80, 192, 0.3);
+}
+
+.project-hero-badge-white {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .project-hero-title {
