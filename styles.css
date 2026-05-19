@@ -696,6 +696,17 @@ body {
   margin: 0;
 }
 
+/* ---- ACTIVE NAV LINK ---- */
+.custom-navbar .nav-link.active {
+  color: var(--purple) !important;
+  font-weight: 500;
+}
+
+/* ---- PAGE TOP SPACING (for pages without a full-height hero) ---- */
+.page-first-section {
+  padding-top: 8rem !important;
+}
+
 /* ---- FOOTER ---- */
 footer {
   background-color: var(--off-white);
